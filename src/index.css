@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark-ov {
+    background-color: rgba(0, 0, 0, 0.3);
+    @apply w-full h-full top-0 left-0 absolute;
+}
+.text-box {
+    @apply absolute z-20 text-white left-56 top-2/4 w-1/3;
+}
