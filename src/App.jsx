@@ -1,11 +1,14 @@
+import { Outlet } from "react-router-dom"
 import { Header, Navbar } from "./components"
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Header />
-      <h1 className="text-teal-500">Hello react</h1>
+      {/* <Header /> */}
+      <div className="">
+        <Outlet />
+      </div>
     </div>
   )
 }

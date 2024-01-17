@@ -7,10 +7,6 @@ import axios from 'axios';
 const Header = () => {
     const [ relatedMovies, setRelatedMovies]  = useState([])
     
-    useEffect(() =>{
-        getRelatedMovies()
-    }, []);
-
     const RELATED_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=a02fd78f6ea2e63062e239b480a951bd&language=en-US"
 
     const getRelatedMovies = async () => {
@@ -18,6 +14,11 @@ const Header = () => {
         const movies = await data.results
         setRelatedMovies(movies)
     }
+
+    useEffect(() =>{
+      getRelatedMovies()
+    }, []);
+
   return (
     <section>
       <Splide options={{
