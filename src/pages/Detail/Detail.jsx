@@ -14,7 +14,6 @@ const Detail = () => {
 
   const getDetail = async () => {
     const { data } = await axios.get(URL);
-    // const detailMovie = await data.results
     setMovie(data);
     console.log(data)
   };
@@ -53,12 +52,12 @@ const Detail = () => {
               </div>
 
               <div className="mb-3">
-                <h1 className="text-2xl">Genres</h1>
+                <h1 className="text-2xl mb-2">Genres</h1>
                 <div className="flex space-x-3">
                   {movie.genres &&
                     movie.genres.map((g) => {
                       return (
-                        <div className="" key={g.id}>
+                        <div className="bg-red-500 text-white px-3 py-[2px]" key={g.id}>
                           <p className="italic">{g?.name}</p>
                         </div>
                       );
@@ -77,8 +76,15 @@ const Detail = () => {
               </div>
               
               <div className="mb-3">
-                <Link to={movie?.homepage} className="px-4 py-2 bg-red-500 text-white">
-                  Watch Now
+                <Link to={movie?.homepage} className="px-4 py-2 border border-red-500  inline-block">
+                  <div className="flex space-x-2">
+                  <span className="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-red-500">
+                      <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="">Watch Now</span>
+                  </div>
                 </Link>
               </div>
             </div>

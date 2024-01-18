@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from '../App';
-import { Detail, Incoming, Popular } from "../pages";
+import { Detail, Incoming, Popular, Search } from "../pages";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         {
             path: "detail/:id",
             element: <Detail />
+        },
+        {
+            path: "search/:title",
+            element: <Search />
         }
       ]
     },

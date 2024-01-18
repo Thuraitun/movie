@@ -21,7 +21,7 @@ const MoviesList = ({ url, title }) => {
         <span className="text-3xl font-bold text-red-500  border-b-2 border-red-500 pb-2">{title}</span>
       </div>
       <div className="grid grid-cols-7 gap-6">
-        { movies.length > 0 &&
+        { movies &&
           movies.map(movie => (
             <Card key={movie.id} movie={movie}/>
           ))
