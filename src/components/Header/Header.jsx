@@ -11,7 +11,7 @@ const Header = () => {
 
     const getRelatedMovies = async () => {
         const { data } = await axios.get(RELATED_URL);
-        const movies = await data.results
+        const movies =  data.results
         setRelatedMovies(movies)
     }
 

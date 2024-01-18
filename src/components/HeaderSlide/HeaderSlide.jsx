@@ -5,7 +5,7 @@ const HeaderSlide = ({movie}) => {
     <div className="relative">
         <img className="w-full h-screen object-cover" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
         <div className="dark-ov"></div>
-        <div className="text-box"> 
+        <div className="hidden md:block text-box"> 
             <h1 className="text-3xl font-extrabold mb-2">{movie.title}</h1>
             <p className="mb-4">{movie.overview}</p>
             <button className="">

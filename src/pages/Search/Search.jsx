@@ -20,10 +20,10 @@ const Search = () => {
         setMovies(moviesData)     
     }
   return (
-    <div className="max-w-[1500px] mx-auto my-10">
+    <div className="max-w-[1500px] mx-auto my-10 p-4">
       <h1 className="text-2xl text-red-500 mb-6">Search result for "<span className="text-white">{title}</span>"</h1>
-      <div className="grid grid-cols-7 gap-6">
-        { movies && 
+      <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-7 gap-6 ">
+        { movies.length && 
             movies.map(movie => (
                 <Card key={movie.id} movie={movie} />
             ))

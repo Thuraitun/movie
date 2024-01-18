@@ -13,8 +13,8 @@ const Navbar = () => {
 
   return (
     <div className="py-4 bg-gray-900 text-white sticky top-0 z-20">
-      <nav className="flex items-center justify-between max-w-[1500px] mx-auto">
-        <div className="flex items-center space-x-2">
+      <nav className="md:flex md:items-center md:justify-between max-w-[1500px] mx-auto px-4 space-y-4 md:space-y-0">
+        <div className="flex justify-center items-center space-x-2">
             <Link to="/" className="text-3xl text-red-500 font-bold uppercase">Movie</Link>
             <span className="">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-[35px] h-[35px] text-red-500">
@@ -22,11 +22,11 @@ const Navbar = () => {
               </svg>
             </span>
         </div>
-        <ul className="flex space-x-5">
+        <ul className="flex justify-center space-x-5">
             <li className=""><NavLink to="/">Popular</NavLink></li>
             <li className=""><NavLink to="/incoming">Incoming</NavLink></li>
         </ul>
-        <form className="flex space-x-2" onSubmit={handleSearch}>
+        <form className="flex justify-center space-x-2" onSubmit={handleSearch}>
             <input value={searchKey} onChange={e => setSearchKey(e.target.value)} type="text" className="border-b border-b-gray-300 bg-transparent focus:outline-none px-2" />
             <button className="">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
